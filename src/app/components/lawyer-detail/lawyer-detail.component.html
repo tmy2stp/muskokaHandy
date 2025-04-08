@@ -1,0 +1,19 @@
+<section class="lawyer-detail">
+    <div class="container detail-wrapper">
+      <div class="info-block">
+        <h2>{{ name }}</h2>
+        <p class="lawyer-title">{{ title }}</p>
+        <div class="contact-info">
+          <p><mat-icon>call</mat-icon> 1800 000 000</p>
+          <p><mat-icon>email</mat-icon> inforbusiness.com</p>
+        </div>
+        <p class="lawyer-bio">{{ bio }}</p>
+        <a mat-button routerLink="/">← Back</a>
+      </div>
+  
+      <div class="image-block">
+        <div class="lawyer-photo" [ngStyle]="{'background-image': 'url(' + photo + ')'}"></div>
+      </div>
+    </div>
+  </section>
+  

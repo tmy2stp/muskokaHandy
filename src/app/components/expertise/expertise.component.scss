@@ -1,0 +1,57 @@
+.expertise-section {
+    background-color: #f7e7ce;
+    padding: 4rem 1rem;
+    overflow: visible;
+    color: #000;
+  
+    h2 {
+      margin-bottom: 2rem;
+    }
+  
+    .expertise-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+  
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+  
+    .expertise-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        width: 100px;
+        min-height: 100px; 
+        overflow: visible; 
+        padding: 1rem 0;
+      
+        mat-icon {
+          font-size: 48px;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #003366;
+          line-height: 1; 
+          margin-bottom: 0.5rem;
+        }
+      
+        p {
+          margin: 0;
+        }
+      }
+  
+    .about-btn {
+      background-color: #003366;
+      color: white;
+    }
+  }
+  

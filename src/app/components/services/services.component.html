@@ -1,0 +1,94 @@
+<section class="services-section" id="services">
+  <h2>Our Services</h2>
+
+  <mat-tab-group mat-stretch-tabs class="services-tabs" animationDuration="300ms">
+    <!-- Interior -->
+    <mat-tab label="Interior">
+      <div class="tab-content">
+        <div class="gallery">
+          <img src="assets/interior1.jpg" (click)="openImage('assets/interior1.jpg')" />
+          <img src="assets/interior2.jpg" (click)="openImage('assets/interior2.jpg')" />
+          <img src="assets/interior3.jpg" (click)="openImage('assets/interior3.jpg')" />
+        </div>
+        <div class="description">
+          <h3>Interior Services</h3>
+          <ul>
+            <li><mat-icon>build</mat-icon> Painting</li>
+            <li><mat-icon>build</mat-icon> Drywall Repair</li>
+            <li><mat-icon>build</mat-icon> Minor Tile Install/Repair</li>
+            <li><mat-icon>plumbing</mat-icon> Fixture Installation</li>
+            <li><mat-icon>construction</mat-icon> Furniture Assembly & Carpentry</li>
+          </ul>
+        </div>
+      </div>
+    </mat-tab>
+
+    <!-- Exterior -->
+    <mat-tab label="Exterior">
+      <div class="tab-content">
+        <div class="gallery">
+          <img src="assets/exterior1.jpg" (click)="openImage('assets/exterior1.jpg')" />
+          <img src="assets/exterior2.jpg" (click)="openImage('assets/exterior2.jpg')" />
+          <img src="assets/exterior3.jpg" (click)="openImage('assets/exterior3.jpg')" />
+        </div>
+        <div class="description">
+          <h3>Exterior Services</h3>
+          <ul>
+            <li><mat-icon>home_repair_service</mat-icon> Deck/Dock Repairs</li>
+            <li><mat-icon>roofing</mat-icon> Gutter & Siding Maintenance</li>
+            <li><mat-icon>fence</mat-icon> Fence & Gate Repair</li>
+            <li><mat-icon>cleaning_services</mat-icon> Pressure Washing</li>
+            <li><mat-icon>build</mat-icon> Junk Removal & Small Renos</li>
+          </ul>
+        </div>
+      </div>
+    </mat-tab>
+
+    <!-- Contracting -->
+    <mat-tab label="Contracting">
+      <div class="tab-content">
+        <div class="gallery">
+          <img src="assets/contracting1.jpg" (click)="openImage('assets/contracting1.jpg')" />
+          <img src="assets/contracting2.jpg" (click)="openImage('assets/contracting2.jpg')" />
+          <img src="assets/contracting3.jpg" (click)="openImage('assets/contracting3.jpg')" />
+        </div>
+        <div class="description">
+          <h3>Contracting</h3>
+          <p>
+            Whether it’s transforming interiors with tasteful updates or enhancing exteriors for lasting beauty and function, we’re committed to delivering quality craftsmanship that stands the test of time.
+          </p>
+          <p>
+            From small upgrades to larger remodels, we work closely with you to bring your vision to life.
+          </p>
+        </div>
+      </div>
+    </mat-tab>
+
+    <!-- Selling Your Home -->
+    <mat-tab label="Selling Your Home?">
+      <div class="tab-content">
+        <div class="gallery">
+          <img src="assets/selling1.jpg" (click)="openImage('assets/selling1.jpg')" />
+          <img src="assets/selling2.jpg" (click)="openImage('assets/selling2.jpg')" />
+          <img src="assets/selling3.jpg" (click)="openImage('assets/selling3.jpg')" />
+        </div>
+        <div class="description">
+          <h3>Selling Your Home?</h3>
+          <p>
+            First impressions matter. We specialize in refreshing, enhancing, and optimizing your home both inside and out so you can attract buyers and secure top dollar.
+          </p>
+          <p>
+            From exterior curb appeal upgrades to interior modernizations, we take care of everything, ensuring your property stands out in the market!
+          </p>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <!-- Image Modal Placeholder -->
+  <ng-template #imageDialog let-data>
+    <div class="modal-image">
+      <img [src]="data" alt="Full image" />
+    </div>
+  </ng-template>
+</section>

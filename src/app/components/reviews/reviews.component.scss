@@ -1,0 +1,30 @@
+.reviews-section {
+    padding: 4rem 1rem;
+    background-color: #121212; // deep charcoal (not full black)
+    text-align: center;
+    color: #e0e0e0;
+  
+    h2 {
+      font-size: 2rem;
+      color: #f7e7ce; // champagne for a bit of warmth
+      margin-bottom: 2rem;
+    }
+  
+    .review-widget {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem;
+      border-radius: 8px;
+  
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+      iframe,
+      .elfsight-app-1229b7af-4791-49d4-9e48-c1882365347d {
+        width: 100%;
+        min-height: 500px;
+        border: none;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); // subtle glow
+      }
+    }
+  }
+  

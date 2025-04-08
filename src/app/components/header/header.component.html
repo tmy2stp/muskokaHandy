@@ -1,0 +1,48 @@
+<header class="header-wrapper">
+  <mat-toolbar class="header-toolbar" [class.sticky]="isSticky">
+
+    <!-- Left: Logo -->
+    <div class="logo-container" routerLink="/" style="cursor: pointer;">
+      <img src="assets/logo.svg" alt="Logo" class="logo" />
+
+    </div>
+
+    <!-- Center: Nav Links (Desktop Only) -->
+    <nav class="nav-links desktop-only">
+      <a mat-button href="#about">About Us</a>
+      <a mat-button href="#services">Services</a>
+      <a mat-button href="#booking">Booking</a>
+      <a mat-button href="#footer">Contact</a>
+    </nav>
+
+    <!-- Right: Button (Desktop), Burger (Mobile) -->
+    <div class="right-actions">
+      <a href="#booking" class="desktop-only">
+        <button mat-button class="btn-primary">Book A Consultation</button>
+      </a>
+      <div class="mobile-menu-button">
+        <button mat-icon-button (click)="toggleSidenav()" [class.open]="isMenuOpen">
+          <div class="burger-icon" [class.open]="isMenuOpen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <!-- Mobile Sidenav -->
+  <mat-sidenav-container class="mobile-sidenav-container">
+    <mat-sidenav #sidenav mode="over" position="end">
+      <nav class="mobile-menu">
+        <a mat-button href="#about" (click)="sidenav.close(); isMenuOpen = false">About Us</a>
+        <a mat-button href="#expertise" (click)="sidenav.close(); isMenuOpen = false">Expertise</a>
+        <a mat-button href="#services" (click)="sidenav.close(); isMenuOpen = false">Services</a>
+        <a mat-button href="#booking" (click)="sidenav.close(); isMenuOpen = false">Booking</a>
+        <a mat-button href="#footer" (click)="sidenav.close(); isMenuOpen = false">Contact</a>
+        <button mat-button class="btn-primary">Book A Consultation</button>
+      </nav>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</header>

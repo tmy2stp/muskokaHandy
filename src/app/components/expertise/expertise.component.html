@@ -1,0 +1,13 @@
+<section class="expertise-section">
+    <div class="container text-center">
+      <h2>Areas of Expertise</h2>
+      <div class="expertise-icons">
+        <div class="expertise-item" *ngFor="let item of expertise">
+          <mat-icon>{{ item.icon }}</mat-icon>
+          <p>{{ item.label }}</p>
+        </div>
+      </div>
+      <button mat-raised-button class="about-btn">About Us</button>
+    </div>
+  </section>
+  
