@@ -1,3 +1,5 @@
+
+
 $blue: #003366;
 $champagne: #f7e7ce;
 $offwhite: #f9f9f9;
@@ -120,45 +122,82 @@ $offwhite: #f9f9f9;
   }
 
   .mobile-sidenav-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh; 
-    // z-index: 1000; 
-    pointer-events: auto;
+    position: relative;
+    z-index: auto; // don’t block anything
+
 
     mat-sidenav {
-      width: 100%;
-      height: 100%;
-      padding: 1rem;
-      background-color: transparent;
-      backdrop-filter: blur(20px) grayscale(90%);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      max-width: 300px;
+      height: 100vh;
+      z-index: 1200;
+      pointer-events: auto;
+      background-color: transparent; // or your style
+      backdrop-filter: blur(30px) grayscale(70%);
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 2rem 2rem;
 
       .mobile-menu {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        padding: 14rem 1rem 1rem;
+        gap: 1.5rem;
+        padding: 10rem 1.5rem 2rem; 
 
         a,
         .btn-primary {
-          color: $blue;
+          color: white;
+          font-weight: 400;
+          font-size: 12px;
         }
 
-        .btn-primary {
-          border: 2px solid $blue;
-          background: transparent;
 
-          &:hover {
-            background-color: $blue;
-            color: white;
-          }
-        }
       }
     }
   }
+
+  // .mobile-sidenav-container {
+  //   position: relative;
+  //   top: 0;
+  //   right: 0;
+  //   width: 100%;
+  //   height: 100vh; 
+  //   pointer-events: auto;
+
+  //   mat-sidenav {
+  //     width: 100%;
+  //     height: 100%;
+  //     padding: 1rem;
+  //     background-color: transparent;
+  //     backdrop-filter: blur(20px) grayscale(90%);
+  //     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  //     .mobile-menu {
+  //       display: flex;
+  //       flex-direction: column;
+  //       gap: 1rem;
+  //       padding: 14rem 1rem 1rem;
+
+  //       a,
+  //       .btn-primary {
+  //         color: $blue;
+  //       }
+
+  //       .btn-primary {
+  //         border: 2px solid $blue;
+  //         background: transparent;
+
+  //         &:hover {
+  //           background-color: $blue;
+  //           color: white;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   .logo {
     height: 70px;
@@ -216,172 +255,52 @@ $offwhite: #f9f9f9;
   background: $blue;
 }
 
+.close-button {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+.close-btn {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  z-index: 9999;
+  cursor: pointer;
 
-// @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant:wght@300;400;500&display=swap');
 
-// $blue: #003366;
-// $champagne: #f7e7ce;
-// $offwhite: #f9f9f9;
+  .burger-icon {
+    width: 18px;
+    height: 14px;
+    position: relative;
 
-// .header-wrapper {
-//   background-color: transparent;
-//   position: relative;
-//   z-index: 10;
-// }
+    span {
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $blue;
+      left: 0;
+      transition: all 0.3s ease;
+    }
 
-// .header-toolbar {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   padding: 0.5rem 1rem;
-//   min-height: 90px;
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   z-index: 1000;
-//   background-color: transparent;
-//   transition: all 0.4s ease;
-//   flex-wrap: nowrap;
-//   box-shadow: none;
-//   backdrop-filter: none;
+    span:nth-child(1) {
+      top: 8px;
+      transform: rotate(45deg);
+    }
 
-//   // Apply soft white + blur when sticky
-//   &.sticky {
-//     background-color: rgba(255, 255, 255, 0.9); // Light opaque white
-//     backdrop-filter: blur(8px) grayscale(40%);
-//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    span:nth-child(2) {
+      opacity: 0;
+    }
 
-//     .nav-links a {
-//       color: $blue; // 👈 changes on scroll
-//     }
-
-//     .logo {
-//       height: 60px;
-//       opacity: 0.7;
-//     }
-//   }
-// }
-
-// // ---------- LOGO ----------
-// .logo-container {
-//   display: flex;
-//   align-items: center;
-
-//   .logo {
-//     height: 90px;
-//     max-height: 90px;
-//     transition: all 0.3s ease;
-//     object-fit: contain;
-//   }
-// }
-
-// // ---------- CENTER NAV ----------
-// .nav-links {
-//   flex: 1;
-//   display: flex;
-//   justify-content: center;
-//   gap: 2rem;
-
-//   a {
-//     color: white; // default before scroll
-//     font-size: 1.05rem;
-//     font-weight: 600;
-//     text-transform: none;
-//     transition: color 0.3s ease;
-
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
-// }
-
-// // ---------- RIGHT SIDE ----------
-// .right-actions {
-//   display: flex;
-//   align-items: center;
-
-//   .btn-primary {
-//     border: 2px solid $blue;
-//     background-color: transparent;
-//     color: $blue;
-//     border-radius: 0;
-//     padding: 0.4rem 1rem;
-//     font-weight: 600;
-//     text-transform: none;
-
-//     &:hover {
-//       background-color: $blue;
-//       color: $offwhite;
-//     }
-//   }
-
-//   .mobile-menu-button {
-//     display: none;
-//     margin-left: 1rem;
-//   }
-// }
-
-// // ---------- MOBILE ----------
-// @media (max-width: 768px) {
-//   .desktop-only {
-//     display: none !important;
-//   }
-
-//   .mobile-menu-button {
-//     display: flex !important;
-//   }
-
-//   .mobile-sidenav-container {
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     width: 100vw;
-//     z-index: 1200;
-
-//     mat-sidenav {
-//       width: 100%;
-//       padding: 1rem;
-//       background-color: white;
-
-//       .mobile-menu {
-//         display: flex;
-//         flex-direction: column;
-//         gap: 1rem;
-
-//         a,
-//         .btn-primary {
-//           color: $blue;
-//         }
-
-//         .btn-primary {
-//           border: 2px solid $blue;
-//           background: transparent;
-
-//           &:hover {
-//             background-color: $blue;
-//             color: white;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   .logo-container {
-//     margin: 0 auto;
-//     justify-content: center;
-//     align-items: center;
-//   }
-
-//   .logo {
-//     height: 70px;
-//   }
-
-//   .logo-text {
-//     text-align: center;
-//   }
-// }
-
-// // ---------- PUSH MAIN BELOW HEADER ----------
-// .main-content {
-//   margin-top: 100px;
-// }
+    span:nth-child(3) {
+      top: 8px;
+      transform: rotate(-45deg);
+    }
+  }
+}

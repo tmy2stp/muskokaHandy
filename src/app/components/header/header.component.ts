@@ -42,6 +42,11 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     this.isMenuOpen = !this.isMenuOpen;
     this.sidenav.toggle();
   }
+
+  closeSidenav(): void {
+    this.isMenuOpen = false;
+    this.sidenav.close();
+  }
 }
 
 
