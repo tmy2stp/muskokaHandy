@@ -21,8 +21,8 @@
         <button mat-button class="btn-primary">Book A Consultation</button>
       </a>
       <div class="mobile-menu-button">
-        <button mat-icon-button (click)="toggleSidenav()" [class.open]="isMenuOpen">
-          <div class="burger-icon" >
+        <button mat-icon-button (click)="toggleSidenav()" >
+          <div class="burger-icon" [class.open]="isMenuOpen" >
             <span></span>
             <span></span>
             <span></span>
@@ -34,12 +34,12 @@
 
   <!-- Mobile Sidenav -->
   <mat-sidenav-container class="mobile-sidenav-container">
-    <mat-sidenav #sidenav mode="over" position="end" [opened]="isMenuOpen" (closedStart)="isMenuOpen = false" >
+    <mat-sidenav #sidenav mode="over" position="start" [opened]="isMenuOpen" (closedStart)="isMenuOpen = false" >
     
    
 
       <nav class="mobile-menu">
-        <button class="close-button" (click)="sidenav.close(); isMenuOpen = false">×</button>
+        <!-- <button class="close-button" (click)="sidenav.close(); isMenuOpen = false">×</button> -->
         <a mat-button href="#about" (click)="sidenav.close(); isMenuOpen = false">About Us</a>
         <a mat-button href="#expertise" (click)="sidenav.close(); isMenuOpen = false">Expertise</a>
         <a mat-button href="#services" (click)="sidenav.close(); isMenuOpen = false">Services</a>

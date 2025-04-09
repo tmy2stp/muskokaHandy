@@ -79,6 +79,8 @@ $offwhite: #f9f9f9;
 .right-actions {
   display: flex;
   align-items: center;
+  // update to burg
+  margin-left: auto;
 
   .btn-primary {
     border: 2px solid $blue;
@@ -129,7 +131,8 @@ $offwhite: #f9f9f9;
     mat-sidenav {
       position: fixed;
       top: 0;
-      right: 0;
+      left: 0;
+      right: auto;
       width: 70%;
       max-width: 300px;
       height: 100vh;
